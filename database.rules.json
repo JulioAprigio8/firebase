@@ -1,0 +1,7 @@
+{
+  "rules": {
+    ".read": true,
+    ".write": "!data.exists() || !newData.exists()",
+    ".validate": "newData.hasChildren(['content', 'timestamp']) && newData.child('content').isString() && newData.child('timestamp').isNumber()"
+  }
+}
